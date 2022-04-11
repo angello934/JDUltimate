@@ -1,0 +1,584 @@
+/* general*/
+
+@font-face{
+    font-family: "justdance";
+    src: url(https://angello934.github.io/jd/font.otf);
+}
+@font-face{
+    font-family: "justdance2";
+    src: url(https://angello934.github.io/jd/RBNo21bBlack.otf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.header{
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 7.5%;
+    z-index: 100;
+    left: 5vh;
+    /* background-color: violet; */
+
+}
+.header p{
+    font-family: 'justdance2', 'justdance', sans-serif;
+    font-size: 5vh;
+    color: #414141;
+    position: relative;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    transform: translatey(10%) translateX(0%);
+}
+
+
+.contador{display: none;}
+
+body{
+    cursor: url(https://angello934.github.io/jd/cursor.png),auto;
+}
+*{
+    cursor: url(https://angello934.github.io/jd/cursor.png),auto;
+}
+.container-vdo{
+    position: relative;
+    height: 100vh;
+}
+
+.video-container-vdo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.video-container-vdo video{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%,-50%);
+}
+
+.video-container-vdo img{
+    position: relative;
+    top: -50%;
+    left: 50%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%,-50%);
+}
+
+.coach-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    overflow: hidden;
+}
+.coach{
+    transform: translatey(1%);
+    width: 100%;
+    /* margin-top: -14vh; */
+    height: 87vh;
+    /* background-image: url(../img/Background.png); */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    /* border-radius: 2vh; */
+    border: rgba(0, 0, 255, 0);
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    overflow: hidden;
+    top: 7vh;
+        position: relative;
+        transition-duration: 0.5s;
+}
+
+.up{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(#ffffff, var(--color-1) 20%,var(--color-2) 90%, #ffffff);
+    position: absolute;
+    display: flex;
+    /* z-index: 10; */
+}
+
+.butonselect{
+    display: none;
+}
+/* .down{
+    width: 100%;
+    height: 7vh;
+    background: linear-gradient(var(--color-2), #ffffff);
+    position: absolute;
+    display: flex;
+    transform: translateY(-100%);
+    z-index: -100;
+    opacity: 70%;
+} */
+
+
+.coach2{
+    width: 100%;
+    /* background: linear-gradient(#00000000, #00000000 25%, var(--secundario-color)); */
+    height: 100vh;
+    border: rgba(0, 0, 255, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: translatey(-100vh) translateX(0%);
+    /* animation: couchintro 1.5s; */
+    transition: height 10s;
+    transition: width 1s;
+    position: absolute;
+}
+
+@keyframes couchintro{
+    0%{
+        /* transform: translatey(-90%) translatex(100%); */
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+.coach2 img{
+    /* max-width: 400px; */
+    /* min-width: 400px; */
+    width: 55vh;
+    background-color: rgba(221, 30, 30, 0);
+    border: rgba(0, 0, 0, 0);
+    /* cursor: pointer; */
+    transition-property: max-width, width, min-width;
+    transition-duration: 0.25s;
+    /* animation: beatimg var(--BPS) infinite alternate; */
+}
+
+/* @keyframes couchintro{
+    0%{
+        transform: translatex(310%);
+        opacity: 0%;
+    }
+    100%{
+        bottom: 6.7vh;
+    }
+} */
+
+@keyframes beatimg{
+    0%{
+        filter: brightness(120%);
+    }
+    35%{
+        transform: translateY(-0.4%);
+    }
+
+    45%{
+        filter: brightness(100%);
+    }
+    100%{
+        transform: translateY(-0.6%);
+    }
+}
+
+
+.coach2 img:hover {
+    /* filter: drop-shadow(0px 0px 5px var(--Primario-color)); */
+    transition-duration: 0.25s;
+    width: 57vh;
+}
+
+
+.hud-container-sct{
+    /* background-color: seagreen; */
+    opacity: 100%;
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 26.39vh;
+    overflow: hidden;
+    /* background-color: rgba(133, 0, 0, 0.486); */
+}
+
+.contador{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.contador p{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 500px;
+    font-family: sans-serif;
+    font-style: rgba(0, 0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.315);
+}
+
+@keyframes display{
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+@keyframes beatpicto{
+    90%{
+        transform: scale(100%);
+    }
+    100%{
+        transform: scale(97%) translateY(1.5%);
+    }
+    }
+
+    .pictograms div img{
+        height: 100%;
+    }
+
+.name{
+    bottom: 5%;
+    left: 0;
+    width: 100%;
+    height: 7vh;
+    /* transform: translateY(-1180%); */
+    position: absolute;
+    transition-duration: 0.5s;
+    background-color: var(--Primario-color-oscuro);
+}
+.name p{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    object-fit: cover;
+    width: 100%;
+    height: 10vh;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vh;
+    font-family: 'justdance', sans-serif;
+    color: rgb(255, 255, 255);
+    z-index: 50;
+
+}
+
+
+
+
+
+
+
+/* .pictograms ul div{
+    width: 10px;
+    background-color: rgb(0, 0, 0);
+} */
+
+
+
+
+
+
+
+
+
+
+
+/* animacion*/
+
+
+
+
+.pictograms{
+    position: relative;
+    overflow: hidden;
+}
+
+.pictograms div{
+    position: fixed;
+    height: 25%;
+    width: 30%;
+    transform: translateX(20000%);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pictograms div img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(7px 3px 0px rgba(0, 0, 0, 0.247));
+}
+
+
+
+
+
+
+
+
+
+
+/* video*/
+
+
+@keyframes introvdo{
+    0%{
+        opacity: 100%;
+    }
+    75%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 0%;
+    }
+}
+
+.playback{
+    z-index: -4;
+}
+
+.intro{
+    z-index: 0;
+}
+
+.outro{
+    z-index: 0;
+    opacity: 0%;
+}
+
+
+.gold-sect{
+    z-index: -1;
+    /* opacity: 50%; */
+    /* mix-blend-mode: screen; */
+}
+
+
+@keyframes outrovdo{
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+
+
+
+/* .template{
+    position: relative;
+    top: -50%;
+    left: 50%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%,-50%);
+} */
+
+
+
+.line{
+    position: fixed;
+    top: 94.77%;
+    height: 0.35vh;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.274);
+    /* background-color: rgb(255, 9, 9); */
+    box-shadow: 2.5px 2.5px 0px rgba(0, 0, 0, 0.158);
+    border-radius: 8px;
+}
+
+
+
+
+/* previa al la seleccion de canción*/
+.menu .up{
+    height: 60vh;
+    opacity: 70%;
+    
+}
+
+.plantilla{
+    z-index: 9999;
+    height: 100vh;
+    background-image: url(/template.png);
+    width: 100%;
+    opacity: 10%;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    display: none;
+}
+
+.menu .coach{
+    height: 48.4vh;
+}
+
+.menu .name{
+    bottom: auto;
+    top: 42.4vh;
+    height: 10vh;
+}
+
+.menu .name p{
+    font-size: 3.1vh;
+    width: 30%;
+    transform: translate(-90%, -61%);
+    z-index: 1000;
+}
+.menu .coach2{
+    position: absolute;
+    transform: translatey(-174%) translateX(185%);
+    height: 53vh;
+    width: 29.8%;
+    z-index: 100;
+    transition: height 0s;
+    transition: width 2s;
+}
+.menu .coach2 img{
+    width: 46.5vh;
+}
+.menu .butonselect{
+    top: 49.8%;
+    left: 30.3%;
+    height: 5%;
+    border-radius: 20px;
+    width: 15%;
+    background-color: var(--Primario-color);
+    border: none;
+    box-shadow: 2.5px 2.5px 15px rgba(0, 0, 0, 0.376);
+    z-index: 1000000;
+    display: flex;
+    position: fixed;
+}
+
+.menu .butonselect p{
+    font-family: 'justdance2', 'justdance', sans-serif;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%,-60%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5vh;
+    letter-spacing: 0.05vh;
+    font-style: rgba(0, 0, 0, 0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.beat{
+    position: fixed;
+    bottom: 4.5%;
+
+    border-radius: 1000px;
+    /* background-color: blue; */
+    background-color: var(--Primario-color);
+    width: var(--ANCHO-LINEA);
+    left: var(--IZQUIERDA);
+    height: 0.96%;
+}
+
+@keyframes beat{
+    0%{
+        left: calc(var(--IZQUIERDA) - 0.5%);
+        width: calc(var(--ANCHO-LINEA) + 1%);
+    }
+}
+
+
+.line svg{
+    position: fixed;
+    bottom: 4.6%;
+    width: 1.5%;
+    height: 1.9%;
+    left: calc( ( var(--IZQUIERDA) + (var(--ANCHO-LINEA) / 2) ) - 0.75%);
+    fill: var(--Primario-color);
+}
+
+
+
+
+
+.videoprevio{
+    opacity: 0;
+    transition: 0.2s;
+}
+
+
+.videoprevio{
+    position: fixed;
+    height: 30vh;
+    width: 32%;
+    transform: translate(68.5%,-300%);
+    z-index: 9999;
+    transition: 0.2s;
+    opacity: 100%;
+    justify-content: center;
+    align-items: center;
+    /* background-color: greenyellow; */
+
+    position: fixed;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.playback-prev{
+    height: 100%;
+    /* transform: translatex(-45%); */
+    border-radius: 20px;
+}
